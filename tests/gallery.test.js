@@ -146,10 +146,10 @@ describe('Gallery Functionality', () => {
       const galleryItem = document.querySelector('.gallery-item');
       const img = galleryItem.querySelector('img');
       
-      // Mock lightbox creation (BROKEN - wrong class)
+      // Mock lightbox creation
       const mockCreateLightbox = (imgSrc, imgAlt) => {
         const lightbox = document.createElement('div');
-        lightbox.classList.add('modal'); // Changed from 'lightbox' to 'modal'
+        lightbox.classList.add('lightbox');
         lightbox.innerHTML = `
           <div class="lightbox-content">
             <span class="lightbox-close">&times;</span>
