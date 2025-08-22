@@ -149,10 +149,10 @@ describe('Animations and Effects', () => {
         }
       };
 
-    const targetValue = 100;
+      const targetValue = 100;
       mockCountUp(statElement, targetValue);
       
-    expect(statElement.textContent).toBe('100');
+      expect(statElement.textContent).toBe('100');
     });
 
     test('should extract numeric value from text content', () => {
