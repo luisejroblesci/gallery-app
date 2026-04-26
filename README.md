@@ -179,4 +179,28 @@ For issues or questions about customizing this template:
 
 **Built with ❤️ for mountaineering photographers**
 
-*Capture the summit, share the journey, inspire the adventure.* 
+*Capture the summit, share the journey, inspire the adventure.*
+
+## Commit logs
+- 2025-07-16 - Initial commit: Add mountaineering photography landing page
+- 2025-07-16 - Add comprehensive test suite with Jest
+- 2025-07-16 - Introduce intentional bugs for test failure demonstration
+- 2025-07-16 - Add GitHub Actions workflows for automated testing
+- 2025-07-17 - CircleCI Commit
+- 2025-07-17 - Merge pull request #1 from luisejroblesci/circleci-project-setup
+- 2025-08-22 - Add Cursor Agent job to CI workflow
+- 2025-08-22 - Run cursor-agent job even if earlier jobs fail
+- 2025-08-22 - Trigger CI to test Cursor Agent workflow
+- 2025-08-22 - CI: capture logs and add Cursor auto-fix job
+- 2025-08-22 - adding auto fix
+- 2025-08-22 - Merge pull request #2 from luisejroblesci/chore/test-cursor-agent
+- 2025-08-22 - auto fix deleted
+- 2025-08-22 - Merge branch 'main' into auto-agent-luis
+- 2025-08-22 - Merge pull request #3 from luisejroblesci/auto-agent-luis
+- 2025-08-22 - Fix CI: correct test expectations and class names to match app behavior.
+- 2025-08-22 - Fix CI tests by aligning selectors, classes, and expectations.
+- 2025-08-22 - Merge pull request #5 from luisejroblesci/ci-fix/auto-agent-luis
+- 2025-08-22 - Merge pull request #6 from luisejroblesci/auto-agent-luis
+- 2025-08-22 - CI(Simple Test): trigger on testing_cursor and intentionally fail
+- 2025-08-25 - feat: Add 44 intentionally flaky tests for agent testing
+- 2025-08-25 - feat: Increase flaky test failure rates to 60%+
