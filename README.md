@@ -179,4 +179,54 @@ For issues or questions about customizing this template:
 
 **Built with ❤️ for mountaineering photographers**
 
-*Capture the summit, share the journey, inspire the adventure.* 
+*Capture the summit, share the journey, inspire the adventure.*
+
+## COMMIT LOG
+
+- 2026-04-27 - docs: Add commit history section to README
+- 2026-04-27 - docs: Add commit history log section to README
+- 2026-04-27 - docs: Add commit log history to README
+- 2026-04-27 - docs: Add commit history log to README
+- 2026-04-27 - docs: Add commit log section to README
+- 2026-04-27 - docs: add commit history log to README
+- 2026-04-27 - docs: add commit log history to README
+- 2026-04-27 - docs: add commit history section to README
+- 2026-04-27 - docs: add comprehensive commit history log to README
+- 2026-04-26 - docs: Add commit log to README
+- 2026-04-26 - docs: Add commit history section to README
+- 2026-04-26 - docs: Add comprehensive commit history log to README
+- 2026-04-25 - docs: add commit log section to README
+- 2026-04-24 - docs: Add commit history log section to README
+- 2026-04-24 - docs: Add commit log to README
+- 2026-04-24 - docs: Add commit history to README
+- 2026-04-14 - fix: exclude flaky tests from default CI test run
+- 2026-04-14 - test: add coverage tests for script.js achieving 100% coverage
+- 2026-04-14 - docs: Add repository overview documentation
+- 2026-03-28 - docs: improve README clarity and add testing section
+- 2026-03-28 - fix: exclude intentionally flaky tests from CI pipeline
+- 2026-03-27 - feat: apply code changes
+- 2026-02-27 - fix(ci): Exclude flaky tests from CI pipeline
+- 2025-08-25 - feat: Increase flaky test failure rates to 60%+
+- 2025-08-25 - feat: Add 44 intentionally flaky tests for agent testing
+- 2025-08-22 - CI(Simple Test): trigger on testing_cursor and intentionally fail
+- 2025-08-22 - Merge pull request #6 from luisejroblesci/auto-agent-luis
+- 2025-08-22 - Merge pull request #5 from luisejroblesci/ci-fix/auto-agent-luis
+- 2025-08-22 - Fix CI failures by aligning tests with app behaviors
+- 2025-08-22 - Fix CI: align tests with implementation for lightbox, scroll-progress, stats, nav toggle, and submit button text. Minimal expectation and class adjustments to restore green.
+- 2025-08-22 - Fix CI tests by aligning selectors, classes, and expectations.
+- 2025-08-22 - Fix CI: correct test expectations and class names to match app behavior.
+- 2025-08-22 - Merge pull request #3 from luisejroblesci/auto-agent-luis
+- 2025-08-22 - Merge branch 'main' into auto-agent-luis
+- 2025-08-22 - auto fix deleted
+- 2025-08-22 - Merge pull request #2 from luisejroblesci/chore/test-cursor-agent
+- 2025-08-22 - adding auto fix
+- 2025-08-22 - CI: capture logs and add Cursor auto-fix job
+- 2025-08-22 - Trigger CI to test Cursor Agent workflow
+- 2025-08-22 - Run cursor-agent job even if earlier jobs fail
+- 2025-08-22 - Add Cursor Agent job to CI workflow
+- 2025-07-17 - Merge pull request #1 from luisejroblesci/circleci-project-setup
+- 2025-07-17 - CircleCI Commit
+- 2025-07-16 - Add GitHub Actions workflows for automated testing
+- 2025-07-16 - Introduce intentional bugs for test failure demonstration
+- 2025-07-16 - Add comprehensive test suite with Jest
+- 2025-07-16 - Initial commit: Add mountaineering photography landing page 
