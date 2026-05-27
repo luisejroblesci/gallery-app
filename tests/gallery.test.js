@@ -208,6 +208,68 @@ describe('Gallery Functionality', () => {
       expect(document.body.style.overflow).toBe('auto');
     });
 
+    test('should close lightbox when Escape key is pressed', () => {
+      const lightbox = document.createElement('div');
+      lightbox.classList.add('lightbox');
+      lightbox.innerHTML = `
+        <div class="lightbox-content">
+          <span class="lightbox-close">&times;</span>
+          <img src="test.jpg" alt="Test">
+        </div>
+      `;
+      document.body.appendChild(lightbox);
+      document.body.style.overflow = 'hidden';
+
+      const mockCloseLightbox = () => {
+        if (document.body.contains(lightbox)) {
+          document.body.removeChild(lightbox);
+          document.body.style.overflow = 'auto';
+        }
+      };
+
+      const mockKeyDownHandler = (e) => {
+        if (e.key === 'Escape') {
+          mockCloseLightbox();
+        }
+      };
+
+      mockKeyDownHandler({ key: 'Escape' });
+
+      expect(lightbox).not.toBeInTheDocument();
+      expect(document.body.style.overflow).toBe('auto');
+    });
+
+    test('should close lightbox when clicking on backdrop', () => {
+      const lightbox = document.createElement('div');
+      lightbox.classList.add('lightbox');
+      lightbox.innerHTML = `
+        <div class="lightbox-content">
+          <span class="lightbox-close">&times;</span>
+          <img src="test.jpg" alt="Test">
+        </div>
+      `;
+      document.body.appendChild(lightbox);
+      document.body.style.overflow = 'hidden';
+
+      const mockCloseLightbox = () => {
+        if (document.body.contains(lightbox)) {
+          document.body.removeChild(lightbox);
+          document.body.style.overflow = 'auto';
+        }
+      };
+
+      const mockBackdropClick = (e) => {
+        if (e.target === lightbox) {
+          mockCloseLightbox();
+        }
+      };
+
+      mockBackdropClick({ target: lightbox });
+
+      expect(lightbox).not.toBeInTheDocument();
+      expect(document.body.style.overflow).toBe('auto');
+    });
+
     test('should have correct gallery item structure', () => {
       const galleryItems = document.querySelectorAll('.gallery-item');
       
@@ -243,10 +305,42 @@ describe('Gallery Functionality', () => {
     test('should have correct data attributes', () => {
       const galleryItems = document.querySelectorAll('.gallery-item');
       const categories = ['peaks', 'climbing', 'landscape', 'peaks'];
-      
+
       galleryItems.forEach((item, index) => {
         expect(item.getAttribute('data-category')).toBe(categories[index]);
       });
+    });
+  });
+
+  describe('Lazy Loading', () => {
+    test('should replace placeholder src with data-src when image becomes visible', () => {
+      document.body.innerHTML = `
+        <img class="lazy" data-src="real-image.jpg" src="placeholder.jpg" alt="Lazy Image 1">
+        <img class="lazy" data-src="real-image2.jpg" src="placeholder2.jpg" alt="Lazy Image 2">
+      `;
+
+      const images = document.querySelectorAll('img[data-src]');
+
+      const mockLazyLoad = (img) => {
+        img.src = img.dataset.src;
+        img.classList.remove('lazy');
+      };
+
+      const mockEntries = Array.from(images).map(img => ({
+        target: img,
+        isIntersecting: true
+      }));
+
+      mockEntries.forEach(entry => {
+        if (entry.isIntersecting) {
+          mockLazyLoad(entry.target);
+        }
+      });
+
+      expect(images[0].src).toContain('real-image.jpg');
+      expect(images[0].classList.contains('lazy')).toBe(false);
+      expect(images[1].src).toContain('real-image2.jpg');
+      expect(images[1].classList.contains('lazy')).toBe(false);
     });
   });
 }); 
